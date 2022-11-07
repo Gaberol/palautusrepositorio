@@ -1,9 +1,11 @@
 from statistics import Statistics
 from player_reader import PlayerReader
 
-
 def main():
-    stats = Statistics(PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2021-22/players.txt"))
+    stats = Statistics(
+      PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2021-22/players.txt")
+    )
+
     philadelphia_flyers_players = stats.team("PHI")
     top_scorers = stats.top(10)
 
